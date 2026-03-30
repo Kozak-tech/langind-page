@@ -7,7 +7,7 @@
   --border: rgba(255,255,255,.12);
 
   --accent: #7c5cff;
-  --accent-2: #35d0ff;
+  --accent-2: #E648BB;
 
   --btn-bg: linear-gradient(135deg, var(--accent), var(--accent-2));
   --btn-text: #071022;
@@ -444,54 +444,6 @@ footer{
   justify-content:space-between;
   gap:12px;
   flex-wrap:wrap;
-}
-
-/* Theme panel */
-.theme-panel{
-  position:fixed;
-  right:14px;
-  bottom:14px;
-  z-index:60;
-  width: min(360px, calc(100vw - 28px));
-  display:none;
-}
-.theme-panel.open{ display:block; }
-.theme-panel .card{ padding:14px; }
-.panel-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:10px;
-}
-.panel-head b{ font-size:14px; }
-.panel-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-}
-.control{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-.control label{
-  font-size:12px;
-  color: var(--muted);
-  font-weight:800;
-}
-.control input[type="color"]{
-  height:42px;
-  padding:0;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.06);
-}
-.panel-actions{
-  display:flex;
-  gap:10px;
-  margin-top:10px;
 }
 
 /* Responsive */
