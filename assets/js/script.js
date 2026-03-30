@@ -69,28 +69,3 @@ form?.addEventListener("submit", (e) => {
     hint.textContent = "Готово! Надішліть повідомлення у чаті.";
   }, 600);
 });
-
-/* Theme Editor */
-const bgColor = $("#bgColor"), accentColor = $("#accentColor"), accent2Color = $("#accent2Color"), radius = $("#radius");
-function applyTheme(t){
-  if(!t) return;
-  document.documentElement.style.setProperty("--bg", t.bg);
-  document.documentElement.style.setProperty("--accent", t.accent);
-  document.documentElement.style.setProperty("--accent-2", t.accent2);
-  document.documentElement.style.setProperty("--radius", t.radius + "px");
-  document.documentElement.style.setProperty("--btn-bg", `linear-gradient(135deg, ${t.accent}, ${t.accent2})`);
-}
-$("#themeBtn")?.addEventListener("click", () => $("#themePanel").classList.add("open"));
-$("#closeTheme")?.addEventListener("click", () => $("#themePanel").classList.remove("open"));
-$("#saveTheme")?.addEventListener("click", () => {
-  const t = { bg: bgColor.value, accent: accentColor.value, accent2: accent2Color.value, radius: radius.value };
-  localStorage.setItem("landing_theme_v1", JSON.stringify(t));
-  applyTheme(t);
-  $("#themePanel").classList.remove("open");
-});
-$("#resetTheme")?.addEventListener("click", () => {
-  localStorage.removeItem("landing_theme_v1");
-  location.reload();
-});
-const saved = JSON.parse(localStorage.getItem("landing_theme_v1"));
-if(saved) applyTheme(saved);
