@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>English with Natalia — Визначення рівня англійської</title>
+  <meta name="description" content="Сучасний інтерактивний тест на визначення рівня англійської мови від А1 до С2." />
+  <link rel="icon" href="assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Анімаційні світлові плями з Лендінгу -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="brand" href="index.html">
+          <span class="logo">
+            <img src="assets/img/logo.png" alt="Logo" />
+          </span>
+          <span>English with Natalia</span>
+        </a>
+        <div class="nav-cta">
+          <a class="btn" href="index.html">← На головну</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main style="min-height: calc(100vh - 140px); display: flex; align-items: center; justify-content: center; padding: 40px 0;">
+    <div class="container" style="max-width: 600px; width: 100%;">
+
+      <!-- ── WELCOME SCREEN ───────────────────────────────────────────────────── -->
+      <div id="screen-welcome" class="screen active">
+        <div class="card test-card">
+          <span class="welcome-flag">🇬🇧</span>
+          <h1 class="welcome-title">Визнач свій рівень англійської</h1>
+          <p class="welcome-subtitle">Пройди адаптований комплексний тест і дізнайся свій рівень — від A1 до C2</p>
+
+          <div class="info-pills">
+            <span class="pill">📝 30 питань</span>
+            <span class="pill">⏱ ~15 хвилин</span>
+            <span class="pill">🎯 A1 → C2</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="form-group">
+            <label for="input-name">Твоє ім'я</label>
+            <input id="input-name" type="text" placeholder="Наприклад: Іван" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="input-contact">Telegram або телефон</label>
+            <input id="input-contact" type="text" placeholder="@username або +380..." autocomplete="off" />
+          </div>
+
+          <button id="btn-start" class="btn btn-primary btn-test-wide">Почати тест →</button>
+        </div>
+        <p class="footer-note">Твої дані використовуються лише для зв'язку з репетитором</p>
+      </div>
+
+      <!-- ── QUIZ SCREEN ───────────────────────────────────────────────────────── -->
+      <div id="screen-quiz" class="screen">
+        <div class="card test-card">
+          <div class="quiz-header">
+            <span id="q-counter" class="q-counter">1 / 30</span>
+            <span id="q-level-badge" class="level-badge-custom">A1</span>
+          </div>
+
+          <div class="progress-track-custom">
+            <div id="progress-bar" class="progress-bar-custom"></div>
+          </div>
+
+          <div id="question-card" class="question-card">
+            <p id="q-text" class="question-text-custom"></p>
+            <div id="options-container" class="options-container-custom"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RESULT SCREEN ─────────────────────────────────────────────────────── -->
+      <div id="screen-result" class="screen">
+        <div class="card test-card">
+          <div class="progress-track-custom" style="margin-bottom:36px">
+            <div id="progress-bar-done" class="progress-bar-custom" style="width:100%"></div>
+          </div>
+
+          <div class="result-done">
+            <span class="result-done-icon">🎉</span>
+            <h2 class="result-done-title">Тест завершено!</h2>
+            <p class="result-done-sub">Всі відповіді збережено. Натисни кнопку нижче, щоб надіслати результати викладачу та дізнатися свій рівень.</p>
+          </div>
+
+          <button id="btn-reveal" class="btn btn-primary btn-test-wide">Дізнатися результат →</button>
+
+          <div id="result-content" class="result-content-custom">
+            <div class="divider" style="margin-top:28px"></div>
+
+            <div class="result-level-card-custom">
+              <span id="result-emoji" class="result-emoji-custom"></span>
+              <div id="result-code" class="result-code-custom"></div>
+              <div id="result-name" class="result-name-custom"></div>
+              <span id="result-score" class="result-score-custom"></span>
+            </div>
+
+            <button id="btn-restart" class="btn btn-test-ghost">Пройти ще раз</button>
+          </div>
+        </div>
+        <p class="footer-note">Репетитор отримає твій результат і незабаром зв'яжеться з тобою</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> English Landing</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/questions.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
