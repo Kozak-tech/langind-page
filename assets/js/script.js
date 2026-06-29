@@ -1,7 +1,7 @@
 const $ = (sel, root=document) => root.querySelector(sel);
 const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
-$("#year").textContent = new Date().getFullYear();
+if ($("#year")) $("#year").textContent = new Date().getFullYear();
 
 // --- CONFIG ---
 const TEACHER_TG = "LvivEnglishTeacher"; // Ваш аккаунт
@@ -10,6 +10,7 @@ const TEACHER_TG = "LvivEnglishTeacher"; // Ваш аккаунт
 const burger = $("#burger");
 const drawer = $("#drawer");
 function setDrawer(open){
+  if (!drawer || !burger) return;
   drawer.style.display = open ? "block" : "none";
   burger.textContent = open ? "✕" : "☰";
 }
@@ -37,12 +38,10 @@ $$('a[href^="#"]').forEach(a => {
 /* Telegram Logic */
 function cleanTelegramInput(input){
   let v = (input || "").trim();
-  // Якщо це посилання, дістаємо юзернейм
   if(v.includes("t.me/")) {
     const m = v.match(/t\.me\/([A-Za-z0-9_]+)/);
     return m ? m[1] : v;
   }
-  // Прибираємо @ на початку, якщо є
   v = v.replace(/^@+/, "");
   return v;
 }
