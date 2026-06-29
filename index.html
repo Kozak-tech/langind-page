@@ -37,7 +37,7 @@
         </div>
 
         <div class="nav-cta">
-          <a class="btn btn-primary" href="#contact">Записатися</a>
+          <a class="btn btn-primary" href="test.html">Пройти тест 📝</a>
           <button class="btn burger" id="burger" type="button" aria-label="Відкрити меню">☰</button>
         </div>
       </nav>
@@ -52,6 +52,7 @@
         <a href="#reviews">Відгуки</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Контакти</a>
+        <a href="test.html" style="color: var(--accent); font-weight: 800;">📝 Пройти тест</a>
       </div>
     </div>
   </header>
@@ -78,7 +79,7 @@
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Записатися на пробний урок</a>
-              <a class="btn" href="#video">Дивитися промо-відео</a>
+              <a class="btn" href="test.html" style="border-color: var(--accent); color: var(--text);">📝 Пройти онлайн-тест</a>
             </div>
 
             <div class="pill-row">
@@ -95,7 +96,7 @@
             <div class="stats">
               <div class="stat"><b>7+ років</b><small>досвіду</small></div>
               <div class="stat"><b>400+</b><small>студентів</small></div>
-              <div class="stat"><b>A1–C1</b><small>рівні</small></div>
+              <div class="stat"><b>A1–C2</b><small>рівні</small></div>
             </div>
           </div>
         </div>
@@ -111,7 +112,7 @@
         <div class="grid-3">
           <div class="card feature">
             <div class="tag">Розмовна</div>
-            <h3>Більше говорити, менше боятися</h3>
+            <h3>Бльше говорити, менше боятися</h3>
             <p>Вивчай англійську не “для правил”, а для життя — щоб говорити легко, природно й без мовного бар’єру.</p>
           </div>
           <div class="card feature">
@@ -137,7 +138,7 @@
           <div class="card feature">
             <div class="tag">1</div>
             <h3>Діагностика рівня</h3>
-            <p>Короткий тест + розмова → визначаємо сильні/слабкі місця.</p>
+            <p>Короткий <a href="test.html" style="color: var(--accent); text-decoration: underline; font-weight:700;">онлайн-тест</a> + розмова → визначаємо сильні/слабкі місця.</p>
           </div>
           <div class="card feature">
             <div class="tag">2</div>
@@ -251,9 +252,20 @@
           </div>
           <div class="card contact-card">
             <h3 class="mb10">Контакти</h3>
-            <p>Telegram: <b>@LvivEnglishTeacher</b></p>
-            <p>Instagram: <b>natalia_kozak_english</b></p>
-            <p class="mt10">Працюю: Пн–Пт, 09:00–20:00</p>
+            <p class="mb15" style="font-size: 0.95rem; color: var(--muted); margin-bottom: 15px;">Працюю: Пн–Пт, 09:00–20:00</p>
+            
+            <!-- Блок кнопок соцмереж (Варіант 2 з власними лого) -->
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; width: 100%;">
+              <a class="btn" href="https://t.me/LvivEnglishTeacher" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: #26a5e4; color: #fff; padding: 12px; border-radius: var(--radius); font-weight: 700; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 15px rgba(38, 165, 228, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                <img src="assets/img/TelegramLogo.png" alt="Telegram" style="width: 22px; height: 22px; object-fit: contain; display: block;" />
+                Написати у Telegram
+              </a>
+              <a class="btn" href="https://www.instagram.com/natalia_kozak_english?igsh=MTM4a3N6N2phZzVidw==" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; padding: 12px; border-radius: var(--radius); font-weight: 700; border: none; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 15px rgba(220, 39, 67, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                <img src="assets/img/InstagramLogo.png" alt="Instagram" style="width: 22px; height: 22px; object-fit: contain; display: block;" />
+                Перейти в Instagram
+              </a>
+            </div>
+
             <div class="contact-actions">
               <a class="btn" href="#hero">⬆︎ На початок</a>
             </div>
